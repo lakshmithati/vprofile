@@ -58,5 +58,5 @@ jobs:
           name: node
           path: maven.zip
     - run: ls -al
-    - run: scp -r node/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_KNOWN_HOST }}:~/vprofile/
+    - run: scp -r node/* ${{ secrets.SSH_USER }}@${{ secrets.HOST }}:~/vprofile/
      
