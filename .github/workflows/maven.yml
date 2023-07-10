@@ -58,7 +58,7 @@ jobs:
           name: node
           path: maven.zip
     - run: ls -al
-    - run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/
+    - run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known-hosts
 
     - run: scp -r node/* ${{ secrets.SSH_USER }}@${{ secrets.HOST }}:~/vprofile/
      
