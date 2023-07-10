@@ -58,13 +58,5 @@ jobs:
           name: node
           path: maven.zip
     - run: ls -al
-    - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@release
-      with:
-          local: maven.zip
-          remote: scp/maven.zip
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.PASSWORD }}
-    
+    - run: scp -r /node :${{ secrets.USER }}&&{{ secrets.HOST }} :~/vprofile/
      
