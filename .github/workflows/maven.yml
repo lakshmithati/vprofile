@@ -31,7 +31,7 @@ jobs:
       run: yarn install    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - run: zip -r maven.zip maven  
+    - run: zip -r maven.zip . -i maven 
     - uses: actions/upload-artifact@v3
       with:
            name: node
