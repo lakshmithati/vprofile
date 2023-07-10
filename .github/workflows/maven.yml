@@ -60,5 +60,5 @@ jobs:
     - run: ls -al
     - run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known-hosts
 
-    - run: scp -r node/* ${{ secrets.SSH_USER }}@${{ secrets.HOST }}:~/vprofile/
+    - run: scp -r node/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_KNOWN_HOSTS }}:~/vprofile/
      
