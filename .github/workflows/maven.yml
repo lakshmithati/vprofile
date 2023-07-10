@@ -61,7 +61,7 @@ jobs:
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: test
+          local: maven.zip
           remote: scp/maven.zip
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
