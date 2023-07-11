@@ -63,5 +63,5 @@ jobs:
 
 
     - run: |
-           scp -r maven.zip/* ${{ secrets.SSH_USER }}:~/vprofile/
+           scp -r maven.zip/* ${{ secrets.SSH_USER }}-${{ secrets.SSH_KNOWN_HOSTS }}:~/vprofile/
      
