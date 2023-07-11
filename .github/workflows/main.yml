@@ -61,7 +61,7 @@ jobs:
       - name: Copy Maven Zip Artifact
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
+          host: ${{ secrets.SSH_KNOWN_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: maven.zip
