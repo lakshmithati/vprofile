@@ -63,5 +63,5 @@ jobs:
 
 
     - run: |
-           scp -r maven.zip/* ${{ secrets.SSH_USER }}-${{ secrets.SSH_KNOWN_HOSTS }}:~/vprofile/
+           scp -r maven.zip azureuser@74.235.31.14:~/vprofile/
      
