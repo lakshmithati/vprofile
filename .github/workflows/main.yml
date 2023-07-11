@@ -57,6 +57,12 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+      - name: download artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: maven
+          path: maven.zip
+
 
       - name: Copy Maven Zip Artifact
         uses: appleboy/scp-action@master
