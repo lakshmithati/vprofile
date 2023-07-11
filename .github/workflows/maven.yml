@@ -59,12 +59,7 @@ jobs:
           path: maven.zip
     - run: ls -al
     - run: ssh-keyscan -H ${{ secrets.SSH_KNOWN_HOSTS }} >> ~/.ssh/known-hosts
-    - run: ssh-keygen -R 74.235.31.14
-
-   
-
-
     - run: |
-         scp -o StrictHostKeyChecking=no -r maven.zip azureuser@74.235.31.14:~/vprofile/
+         scp -r maven.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_KNOWN_HOSTS }}:~/vprofile/
 
      
