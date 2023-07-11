@@ -61,7 +61,5 @@ jobs:
     - run: ssh-keyscan -H ${{ secrets.SSH_KNOWN_HOSTS }} >> ~/.ssh/known-hosts
 
     - run: |
-           scp -r maven.zip/* ${{ secrets.SSH_USER }}
-           ${{ secrets.SSH_KNOWN_HOSTS }}
-           :~/vprofile/
+           scp -r maven.zip/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_PRIVATE_KEY }}@${{ secrets.SSH_KNOWN_HOSTS }}:~/vprofile/
      
